@@ -19,7 +19,7 @@ def create_app():
 
     from sqlalchemy import text
     from app.models.contacto import DDL_CONTACTOS
-    from app.models.usuario import DDL_USUARIOS
+    from app.models.usuario import DDL_USUARIOS, SQL_COLUMNA_BLOQUEADO_EXISTE, DDL_USUARIOS_BLOQUEADO
     with app.app_context():
         try:
             db.session.execute(text(DDL_CONTACTOS))
